@@ -21,4 +21,8 @@ $ aws ecr get-login-password --region ap-northeast-1 | \
 $ docker push 353381651656.dkr.ecr.ap-northeast-1.amazonaws.com/nginx:latest
 ```
 
-## 
+```sh
+# Register task defition
+$ aws ecs register-task-definition --cli-input-json file://taskdef.json
+```
+
