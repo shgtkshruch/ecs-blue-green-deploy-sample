@@ -21,8 +21,18 @@ $ aws ecr get-login-password --region ap-northeast-1 | \
 $ docker push 353381651656.dkr.ecr.ap-northeast-1.amazonaws.com/nginx:latest
 ```
 
+## Register task definition
+
 ```sh
-# Register task defition
+# Register task definition
 $ aws ecs register-task-definition --cli-input-json file://taskdef.json
 ```
 
+## Creat ECS service
+```sh
+# Create ECS service
+$ aws ecs create-service --service-name my-service --cli-input-json file://create-service.json
+
+# Confirm
+$ aws ecs describe-services --cluster ecs-blue-green-deploy --services my-service
+```
