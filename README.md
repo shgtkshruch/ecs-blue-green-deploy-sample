@@ -36,3 +36,14 @@ $ aws ecs create-service --service-name my-service --cli-input-json file://creat
 # Confirm
 $ aws ecs describe-services --cluster ecs-blue-green-deploy --services my-service
 ```
+
+## Update Nginx
+
+https://hub.docker.com/_/nginx
+
+```sh
+$ docker build -t 353381651656.dkr.ecr.ap-northeast-1.amazonaws.com/nginx:latest .
+$ docker run -d -p 8080:80 353381651656.dkr.ecr.ap-northeast-1.amazonaws.com/nginx:latest
+```
+
+Open `localhost:8080` in user browser.
