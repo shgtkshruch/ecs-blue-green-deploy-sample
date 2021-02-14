@@ -1,6 +1,13 @@
 # ecs-blue-green-deploy-sample
 https://docs.aws.amazon.com/ja_jp/codepipeline/latest/userguide/tutorials-ecs-ecr-codedeploy.html
 
+1. Cerate Docker image and push to ECR
+1. Create ECS task definition and AppSpec source files
+1. Create ALB and taget groups
+1. Create CodeDeploy application and deployment group
+1. Create deployment pipeline on GitHub Actions
+1. Update `static-html-directory/index.html` and push Gitub
+
 ## Create Nginx repository in ECR
 
 ```sh
